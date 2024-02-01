@@ -27,20 +27,20 @@ module.exports = {
   },
   devServer: {
     before(app) {
-      app.get('/api/seller', (req, res) => {
+      app.get('/vue-sell/api/seller', (req, res) => {
         const id = req.query.id
         res.json({
           errno: 0,
           data: Object.assign({}, seller, {id})
         })
       })
-      app.get('/api/goods', (req, res) => {
+      app.get('/vue-sell/api/goods', (req, res) => {
         res.json({
           errno: 0,
           data: goods
         })
       })
-      app.get('/api/ratings', (req, res) => {
+      app.get('/vue-sell/api/ratings', (req, res) => {
         res.json({
           errno: 0,
           data: ratings
