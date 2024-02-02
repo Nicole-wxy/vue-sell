@@ -1,13 +1,12 @@
 const webpack = require('webpack')
 const path = require('path')
-function resolve(dir) {
-  return path.join(__dirname, dir)
-}
-const appData = require(resolve('/data.json'))
+const appData = require('./data.json')
 const seller = appData.seller
 const goods = appData.goods
 const ratings = appData.ratings
-
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? '/vue-sell/' : '/',
   css: {
