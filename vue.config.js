@@ -1,10 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
-const express = require('express')
-const app = express()
-let appData = require('./data.json')
-var apiRoutes = express.Router()
-app.use('/vue-sell/api',apiRoutes)
+const appData = require('./data.json')
 const seller = appData.seller
 const goods = appData.goods
 const ratings = appData.ratings
