@@ -1,6 +1,11 @@
 const webpack = require('webpack')
 const path = require('path')
-const appData = require('./data.json')
+// 开发环境下的请求地址
+let appData = require('./data.json')
+// 生产环境下的请求地址
+  if(process.env.NODE_ENV === 'production'  ){
+    appData='https://raw.githubusercontent.com/Nicole-wxy/vue-sell/master/data.json'
+}
 const seller = appData.seller
 const goods = appData.goods
 const ratings = appData.ratings
