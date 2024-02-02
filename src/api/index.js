@@ -1,7 +1,7 @@
 import { get } from './helpers'
 let getUrl = './'
 if (process.env.NODE_ENV === 'production') {
-  getUrl = '/vue-sell'
+  getUrl = '/vue-sell/'
 }
 const getSeller = get(`${getUrl}api/seller`)
 const getGoods = get(`${getUrl}api/goods`)
