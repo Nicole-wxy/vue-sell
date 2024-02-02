@@ -1,13 +1,11 @@
 const webpack = require('webpack')
 const path = require('path')
-// 开发环境下的请求地址
+const express = require('express')
+const app = express()
 let appData = require('./data.json')
-// 生产环境下的请求地址
-  if(process.env.NODE_ENV === 'production'  ){
-    appData='https://raw.githubusercontent.com/Nicole-wxy/vue-sell/master/data.json'
-}
+var apiRoutes = express.Router()
+app.use('/api',apiRoutes)
 const seller = appData.seller
-console.log(seller)
 const goods = appData.goods
 const ratings = appData.ratings
 function resolve(dir) {
