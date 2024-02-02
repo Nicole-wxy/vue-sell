@@ -1,11 +1,12 @@
 import { get } from './helpers'
-let baseUrl = './'
+let getSeller = get('./api/seller')
+let getGoods = get('./api/goods')
+let getRatings = get('./api/ratings')
 if (process.env.NODE_ENV === 'production') {
-    baseUrl = '/vue-sell/'
+    getSeller = get('./api/seller.json')
+    getGoods = get('./api/goods.json')
+    getRatings = get('./api/ratings.json')
 }
-const getSeller = get(baseUrl + 'api/seller')
-const getGoods = get(baseUrl + 'api/goods')
-const getRatings = get(baseUrl + 'api/ratings')
 export {
     getSeller,
     getGoods,
