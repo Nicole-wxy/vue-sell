@@ -7,6 +7,7 @@ let appData = require('./data.json')
     appData='https://raw.githubusercontent.com/Nicole-wxy/vue-sell/master/data.json'
 }
 const seller = appData.seller
+console.log(seller)
 const goods = appData.goods
 const ratings = appData.ratings
 function resolve(dir) {
