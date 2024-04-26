@@ -8,7 +8,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/vue-sell/' : '/',
+  // publicPath: process.env.NODE_ENV === 'production' ? '/vue-sell/' : '/',
   css: {
     loaderOptions: {
       stylus: {
@@ -55,5 +55,6 @@ module.exports = {
       .set('api',resolve('src/api'))
       config.plugin('context')
         .use(webpack.ContextReplacementPlugin, [/moment[/\\]locale$/, /zh-cn/]);
-  }
+  },
+  baseUrl:''
 }
